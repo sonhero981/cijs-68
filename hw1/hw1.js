@@ -19,38 +19,31 @@
 
 // console.log(rot13("PUNEVMNEQ"))
 
-// 2
-// function distanceToNearestVowel(str){
-//     let arr = str.toLowerCase().split("");
-//     let newArr= [];
-
-//     for(let i = 0; i< arr.length; i++) {
-//         if(arr[i] == "a" || arr[i] == "e" || arr[i] == "o" || arr[i] == "i" || arr[i] == "u") {
-//             arr[i] = 0;
-//         } else {
-//             arr[i] = 1;
-            
-//         }   
-//         return newArr
-//     }
-// }
+2
+function distanceToNearestVowel(str){
+    let arr = str.toLowerCase().split("");
+    let newArr= [];
+    let indexVowel = [];
+    let indexNearVowel= [];
+    let pos = 100000;
+    for (let i = 0; i < arr.length; i++) {
+        if(arr[i] == "a" || arr[i] == "e" || arr[i] == "o" || arr[i] == "i" || arr[i] == "u") {
+            indexVowel.push(i);
+            for (let j = 0; j < arr.length; j++) {
+                    let index = Math.abs(j - indexVowel[i])
+                    if (pos > index){
+                        pos = index
+                        indexNearVowel.push(pos)
+                    }        
+            }
+        }
+    }
+    console.log(indexVowel)
+    return indexNearVowel
+}
  
 
-// console.log(distanceToNearestVowel("abca"))
-
-let arr = ["a","b", "b","b","a"];
-let newArr = arr.map(function(value){
-    if(value !== "a"){
-        return 1
-    }else{
-        return 0
-    }
-} )
-
-let new2 = newArr.map( function(value){
-    if(value !)
-})
-console.log(newArr)
+console.log(distanceToNearestVowel("abaca"))
 
 // 3
 // function checkFirstChar(str) {
