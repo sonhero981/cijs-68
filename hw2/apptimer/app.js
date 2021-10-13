@@ -3,6 +3,10 @@ let countHour = document.getElementById("count-hour");
 let countMinute = document.getElementById("count-minute");
 let countSecond = document.getElementById("count-second");
 let inputTimer = document.getElementById("input-timer");
+let circleDay = document.getElementById("circle-day");
+let circleHour = document.getElementById("circle-hour");
+let circleMinute = document.getElementById("circle-minute");
+let circleSecond = document.getElementById("circle-second");
 
 inputTimer.addEventListener("input" ,renderTimer)
  function renderTimer(){
@@ -35,11 +39,22 @@ inputTimer.addEventListener("input" ,renderTimer)
     countMinute.innerHTML = countTime.minutes;
     countSecond.innerHTML = countTime.seconds;
 
+    circleSecond.style.strokeDashoffset = ((60 - countTime.seconds) / 60)*472
+    if(circleSecond.style.strokeDashoffset == 472) {
+        circleSecond.style.strokeDashoffset == 0
+    }
+console.log(circleSecond)
+
+
+   
     setInterval(function(){
         renderTimer()
     },1000)
 
 }
+
+
+
 
 
 

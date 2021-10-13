@@ -17,20 +17,41 @@
 }
 
 .container {
-    width: 600px;
+    width: 700px;
     height: 100%;
 }
 
 .count-times {
-    color: #000;
-    background-color: #fff;
+    color: #fff;
+    background-color: none;
     font-size: 30px;
     text-align: center;
     font-weight: 600;
+    position: relative;
+    width: 80%;
 }
 
 .count-heading {
     color: #fff;
     font-size: 20px;
     text-align: center;
+}
+
+.box {
+    position: relative;
+}
+
+circle {
+    fill: none;
+    stroke: url(#GradientColor);
+    stroke-width: 20px;
+    stroke-dasharray: 472;
+    stroke-dashoffset: 0;
+}
+
+svg {
+    position: absolute;
+    left: 0px;
+    top: -46px;
+    transform: rotate(-90deg);
 }
