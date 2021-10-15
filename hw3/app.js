@@ -32,17 +32,19 @@ let row = document.getElementById("row");
 let book = document.querySelectorAll(".book");
 searchBtn.addEventListener("click",search)
 
-function search() {
-    let key = inputSearch.value;
-    fetch( `https://www.googleapis.com/books/v1/volumes?q=${key}`)
-    .then(res => res.json())
-    .then(data => {
-        console.log(data)
-        renderBook(data)
-    })
-}
+    function search() {
+        let key = inputSearch.value;
+        fetch( `https://www.googleapis.com/books/v1/volumes?q=${key}`)
+        .then(res => res.json())
+        .then(data => {
+            console.log(data)
+            renderBook(data)
+        })
+    }
+
 
 function renderBook(data) {
+    row.innerHTML = "";
     let dataRender = data.items.map(x => {
         console.log(x.previewLink)
         return `<div class="col-3">
