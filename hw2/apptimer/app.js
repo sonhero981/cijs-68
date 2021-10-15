@@ -39,10 +39,10 @@ inputTimer.addEventListener("input" ,renderTimer)
     countMinute.innerHTML = countTime.minutes;
     countSecond.innerHTML = countTime.seconds;
 
-    circleDay.style.strokeDashoffset = ((30 - countTime.days) / 30)*472;
-    circleHour.style.strokeDashoffset = ((24 - countTime.hours) / 24)*472;
-    circleMinute.style.strokeDashoffset = ((60 - countTime.minutes) / 60)*472;
-    circleSecond.style.strokeDashoffset = ((60 - countTime.seconds) / 60)*472;
+    circleDay.style.strokeDashoffset = ((30 - countTime.days) / 30)*440;
+    circleHour.style.strokeDashoffset = ((24 - countTime.hours) / 24)*440;
+    circleMinute.style.strokeDashoffset = ((60 - countTime.minutes) / 60)*440;
+    circleSecond.style.strokeDashoffset = ((60 - countTime.seconds) / 60)*440;
 console.log(circleSecond)
 
 

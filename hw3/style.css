@@ -1,0 +1,80 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://cdn.pixabay.com/photo/2017/10/31/19/05/web-design-2906159_1280.jpg);
+
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+}
+
+.input-group {
+    margin: 30px;
+}
+
+.book {
+    height: 300px;
+    border-radius: 15%;
+    border: 1px solid #0000;
+    color: #ffff;
+    display: flex;
+    justify-self: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-bottom: 20px;
+    overflow: hidden;
+    box-shadow: rgba(221, 228, 224, 0.678) 5px 5px;
+}
+
+.book-info {
+    color: #fff;
+    position: absolute;
+    top: 140px;
+    bottom: 0px;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.267);
+    width: 100%;
+
+}
+
+.name-book {
+    font-size: 20px;
+    font-weight: 700;
+    text-transform: uppercase;
+    text-shadow: #000 1px 1px;
+}
+
+.author {
+    text-align: right;
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 18px;
+}
+
+.detail-book {
+    position: absolute;
+    bottom: 0;
+    left: 30px;
+}
+
+.detail-link {
+    text-decoration: none;
+    color:rgb(200, 95, 9);
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.detail-link:hover {
+    color: #fff;
+}
+
